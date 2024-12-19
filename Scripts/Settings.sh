@@ -44,6 +44,8 @@ fi
 
 #高通平台调整
 if [[ $WRT_TARGET == *"IPQ"* ]]; then
+        echo "CONFIG_ATH11K_MEM_PROFILE_1G=n" >> ./.config
+	echo "CONFIG_ATH11K_MEM_PROFILE_512M=y" >> ./.config
 	#取消nss相关feed
 	echo "CONFIG_FEED_nss_packages=n" >> ./.config
 	echo "CONFIG_FEED_sqm_scripts_nss=n" >> ./.config
